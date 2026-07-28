@@ -14,7 +14,7 @@ export const metadata = {
     "Lennor Ply manufactures ISI-certified MR, BWR, BWP and Marine grade plywood, block boards and flush doors in Karnataka — composed, calibrated, ACC-treated and lab-tested across a sixteen-station line.",
   alternates: { canonical: "/" },
   icons: {
-    icon: "/assets/brand/favicon-64.png",
+    icon: "/assets/brand/mark-white-256.png",
     apple: "/assets/brand/apple-touch-icon.png",
   },
   openGraph: {
