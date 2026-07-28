@@ -1,16 +1,16 @@
 {
   "name": "lennor-ply",
   "version": "1.0.0",
-  "description": "Lennor Ply — static marketing site served by an Express (Node.js) server.",
+  "description": "Lennor Ply — marketing site built with Next.js (App Router).",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "engines": {
-    "node": ">=18"
+    "dev": "next dev -p 4620",
+    "build": "next build",
+    "start": "next start -p 4620"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "next": "^15.1.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

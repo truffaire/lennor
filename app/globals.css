@@ -7,28 +7,28 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/dm-sans-var.woff2") format("woff2");
+  src: url("/assets/fonts/dm-sans-var.woff2") format("woff2");
   font-weight: 100 1000;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/dm-sans-italic-var.woff2") format("woff2");
+  src: url("/assets/fonts/dm-sans-italic-var.woff2") format("woff2");
   font-weight: 100 1000;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "DM Mono";
-  src: url("../assets/fonts/dm-mono-400.woff2") format("woff2");
+  src: url("/assets/fonts/dm-mono-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "DM Mono";
-  src: url("../assets/fonts/dm-mono-500.woff2") format("woff2");
+  src: url("/assets/fonts/dm-mono-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -648,7 +648,7 @@ body.menu-open .menu {
   bottom: -14%;
   width: 62vmin;
   height: 62vmin;
-  background: url("../assets/brand/mark-black.png") center / contain no-repeat;
+  background: url("/assets/brand/mark-black.png") center / contain no-repeat;
   opacity: 0.05;
   pointer-events: none;
 }

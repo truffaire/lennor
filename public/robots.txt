@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /sections-lab.html
-Disallow: /standard-options.html
 
 Sitemap: https://lennorply.com/sitemap.xml
