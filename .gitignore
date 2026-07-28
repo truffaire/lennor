@@ -3,4 +3,11 @@ Thumbs.db
 *.log
 node_modules/
 .env
+.env*.local
 .claude/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+.vercel

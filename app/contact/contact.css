@@ -1,0 +1,3 @@
+/* Contact-page Leaflet pin/popup styling (ported from the original inline <style>). */
+.custom-leaflet-pin { background: transparent !important; border: none !important; }
+.leaflet-popup-content-wrapper { font-family: var(--font-body); border-radius: 8px; padding: 4px; }
