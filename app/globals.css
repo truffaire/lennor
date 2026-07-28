@@ -2806,14 +2806,14 @@ a.dline__value:hover {
   display: grid;
   place-items: center;
   overflow: hidden;
-  color: var(--white);
-  background: rgba(28, 25, 21, 0.32);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.4),
-              0 2px 8px -2px rgba(0, 0, 0, 0.22),
-              inset 0 1px 1px rgba(255, 255, 255, 0.55),
-              inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 10px 28px -8px rgba(0, 0, 0, 0.28),
+              0 2px 6px -2px rgba(0, 0, 0, 0.16),
+              inset 0 1px 1px rgba(255, 255, 255, 0.75),
+              inset 0 -1px 2px rgba(0, 0, 0, 0.10);
   transition: transform 0.45s var(--ease-out), background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
 }
 /* thin glass sheen along the top edge */
@@ -2826,7 +2826,7 @@ a.dline__value:hover {
   right: 8px;
   height: 44%;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -2851,11 +2851,11 @@ a.dline__value:hover {
 .dock a:hover,
 .dock button:hover {
   transform: translateY(-4px);
-  background: rgba(28, 25, 21, 0.42);
-  box-shadow: 0 18px 42px -10px rgba(0, 0, 0, 0.48),
-              0 3px 10px -2px rgba(0, 0, 0, 0.24),
-              inset 0 1px 1px rgba(255, 255, 255, 0.7),
-              inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.32),
+              0 3px 8px -2px rgba(0, 0, 0, 0.18),
+              inset 0 1px 1px rgba(255, 255, 255, 0.9),
+              inset 0 -1px 2px rgba(0, 0, 0, 0.10);
 }
 .dock a svg,
 .dock button svg {
@@ -2863,7 +2863,9 @@ a.dline__value:hover {
   z-index: 2;
   width: 21px;
   height: 21px;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  /* white halo keeps dark icons legible on dark sections, dark edge on light */
+  filter: drop-shadow(0 0 2.5px rgba(255, 255, 255, 0.85))
+          drop-shadow(0 1px 1px rgba(0, 0, 0, 0.22));
 }
 
 /* ---- responsive --------------------------------------------------------------------------------- */
@@ -2958,11 +2960,11 @@ a.dline__value:hover {
 
 /* ---- dock buttons \u2014 whatsapp keeps its brand green on the glass -------------- */
 .dock a:first-child {
-  color: #3ddc7f;
+  color: #1EB955;
 }
 .dock a:first-child:hover {
-  background: rgba(37, 211, 102, 0.26);
-  border-color: rgba(52, 224, 122, 0.6);
+  background: rgba(37, 211, 102, 0.16);
+  border-color: rgba(52, 224, 122, 0.5);
 }
 
 
