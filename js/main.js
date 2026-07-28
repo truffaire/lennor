@@ -1079,6 +1079,30 @@
     dock.classList.toggle("is-on", scrollY > 560);
   }
 
+  var toTop = doc.getElementById("toTop");
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      if (lenis) lenis.scrollTo(0);
+      else win.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    });
+  }
+
+  /* liquid specular: highlight follows the cursor inside each dock button */
+  if (dock) {
+    var dockBtns = dock.querySelectorAll("a, button");
+    for (var d = 0; d < dockBtns.length; d++) {
+      dockBtns[d].addEventListener("mousemove", function (e) {
+        var r = this.getBoundingClientRect();
+        this.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
+        this.style.setProperty("--my", ((e.clientY - r.top) / r.height) * 100 + "%");
+      });
+      dockBtns[d].addEventListener("mouseleave", function () {
+        this.style.setProperty("--mx", "50%");
+        this.style.setProperty("--my", "50%");
+      });
+    }
+  }
+
   /* custom cursor removed — native browser cursor is used instead */
 
 
