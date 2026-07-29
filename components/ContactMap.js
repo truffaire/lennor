@@ -34,14 +34,14 @@ export default function ContactMap() {
       }).addTo(map);
 
       const pinHtml =
-        '<div style="width:28px;height:34px;background:#0D0C0A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:1.5px solid #fff;"><div style="width:10px;height:10px;background:#fff;border-radius:50%;transform:rotate(45deg);"></div></div>';
+        '<svg width="28" height="36" viewBox="0 0 28 36" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 3px rgba(0,0,0,0.35))"><path d="M14 2 C7.4 2 2 7.4 2 14 C2 22 14 34 14 34 C14 34 26 22 26 14 C26 7.4 20.6 2 14 2 Z" fill="#0D0C0A"/><circle cx="14" cy="13" r="5" fill="#ffffff"/></svg>';
 
       const blackIcon = L.divIcon({
         className: "custom-leaflet-pin",
         html: pinHtml,
-        iconSize: [28, 34],
-        iconAnchor: [14, 34],
-        popupAnchor: [0, -32],
+        iconSize: [28, 36],
+        iconAnchor: [14, 36],
+        popupAnchor: [0, -34],
       });
 
       L.marker([13.005, 76.102], { icon: blackIcon })

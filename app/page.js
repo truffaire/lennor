@@ -35,45 +35,6 @@ const jsonLd = {
   ],
 };
 
-const marqueeRow1 = [
-  { n: "01", alt: "Modular Oak Kitchen — BWR Grade" },
-  { n: "02", alt: "Smoked Walnut Cabinetry — Modern Executive" },
-  { n: "03", alt: "Fluted Teak Breakfast Island — Travertine Top" },
-  { n: "04", alt: "Integrated Plywood Pantry — Pocket Door System" },
-  { n: "05", alt: "Calibrated Multi-Ply Edges — 18mm Core" },
-  { n: "06", alt: "Architectural Wall Paneling — Teak Veneer" },
-  { n: "07", alt: "Acoustic Slatted Oak Wall — Office Suite" },
-];
-const marqueeRow2 = [
-  { n: "08", alt: "Geometric Bookmatched Walnut Feature Wall" },
-  { n: "09", alt: "Steam-Formed Plywood Wall — Curved Corridor" },
-  { n: "10", alt: "Integrated Library System — White Oak Plywood" },
-  { n: "11", alt: "Floor-to-Ceiling Wardrobes — Ash Veneer" },
-  { n: "12", alt: "Floating Plywood Bed Headboard — Japandi Suite" },
-  { n: "13", alt: "Executive Desk — Multi-Layer Chamfered Edges" },
-  { n: "14", alt: "Suspended Linear Ceiling Baffles — Light Birch" },
-];
-const marqueeRow3 = [
-  { n: "15", alt: "Cantilevered Media Unit — Lime-wash Wall" },
-  { n: "16", alt: "Grand Pivot Flush Door — Solid Core" },
-  { n: "17", alt: "Concealed Frame Flush Interior Door" },
-  { n: "18", alt: "Sliding Pocket Partition Doors — Honey Teak" },
-  { n: "19", alt: "Double Entry Flush Doors — Brass Inlays" },
-  { n: "20", alt: "Superyacht Main Saloon — IS:710 Marine Grade" },
-  { n: "21", alt: "Waterproof Spa Bathroom Vanity — Marine Teak" },
-  { n: "22", alt: "Covered Villa Patio Ceiling — Exterior Marine Soffit" },
-];
-
-function MarqueeCard({ n, alt }) {
-  return (
-    <figure className="mcard">
-      <div className="plate plate--hover" data-plate>
-        <img src={`/assets/img/gallery/app-${n}.png`} alt={alt} width="1600" height="1050" loading="lazy" />
-      </div>
-    </figure>
-  );
-}
-
 const seals = [
   {
     id: "sealpath1",
@@ -147,40 +108,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* manifesto */}
-        <section className="band manifesto rule-top">
-          <div className="shell">
-            <div className="sect-head">
-              <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">01</span><span className="label label--ink">The invisible promise</span></div>
-                <span className="index sect-head__meta">Why Lennor exists</span>
-              </div>
-              <h2 className="h2" data-mask>
-                <span className="mask-line"><span>Plywood is a promise</span></span>
-                <span className="mask-line" style={{ "--d": ".1s" }}><span>you can’t <em className="it">see</em>.</span></span>
-              </h2>
-            </div>
-
-            <div className="mpillars">
-              <article className="mpillar" data-reveal>
-                <span className="mpillar__num">01</span>
-                <h3 className="mpillar__title">The hidden core</h3>
-                <p className="body mpillar__body">What holds a board together — veneers, glue lines, borer treatment — is invisible to the buyer. A carpenter screwing a hinge, a family loading a shelf for twenty years, they are trusting something they will never see.</p>
-              </article>
-              <article className="mpillar" data-reveal style={{ "--d": ".1s" }}>
-                <span className="mpillar__num">02</span>
-                <h3 className="mpillar__title">Own the process</h3>
-                <p className="body mpillar__body">We compose every core ourselves, mix our own resin, calibrate every board on our own sixteen-station line. Nothing is outsourced, because trust can’t be.</p>
-              </article>
-              <article className="mpillar" data-reveal style={{ "--d": ".2s" }}>
-                <span className="mpillar__num">03</span>
-                <h3 className="mpillar__title">Test everything</h3>
-                <p className="body mpillar__body">Every batch is lab-tested against IS:303 and IS:710 in our own laboratory before it earns the Lennor mark. If it didn’t survive all sixteen stations, it isn’t a Lennor.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
         {/* anatomy · cutaway */}
         <section className="band rule-top" id="anatomy">
           <div className="shell">
@@ -226,7 +153,7 @@ export default function Home() {
                 </div>
                 <div className="cut__row" data-i="2">
                   <span className="mm">2.4 mm</span>
-                  <span><span className="nm">Composed core</span><span className="ds">Jointed edge-to-edge — no gaps, no voids</span></span>
+                  <span><span className="nm">Composed core</span><span className="ds">Multiple layers of core veneer, jointed edge-to-edge — no gaps, no voids</span></span>
                   <span className="ix">03</span>
                 </div>
                 <div className="cut__row" data-i="3">
@@ -265,14 +192,14 @@ export default function Home() {
 
             <div className="grades__list" style={{ marginTop: "clamp(44px,5.5vw,80px)" }}>
 
-              <article className="grade is-open" data-reveal>
+              <article className="grade" data-reveal>
                 <span className="grade__no">01</span>
                 <h3 className="grade__name">MR</h3>
                 <div className="grade__meta">
                   <span className="grade__tier">Moisture Resistant — interior grade</span>
                   <span className="grade__is">IS:303</span>
                 </div>
-                <button className="grade__cue" aria-expanded="true" aria-label="Toggle MR details">
+                <button className="grade__cue" aria-expanded="false" aria-label="Toggle MR details">
                   <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M7 1v12M1 7h12" /></svg>
                 </button>
                 <div className="grade__panel">
@@ -286,7 +213,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="grade__specs">
-                          <div className="grade__spec"><span className="k">Bond</span><span className="v">Urea-formaldehyde</span></div>
+                          <div className="grade__spec"><span className="k">Bond</span><span className="v">Melamine-Urea-Formaldehyde</span></div>
                           <div className="grade__spec"><span className="k">Lab test</span><span className="v">Moisture &amp; glue shear</span></div>
                           <div className="grade__spec"><span className="k">Standard</span><span className="v">IS:303</span></div>
                         </div>
@@ -538,22 +465,39 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="marquee-reel" style={{ marginTop: "clamp(44px,5.5vw,72px)" }} data-reveal>
-              <div className="marquee-row">
-                <div className="marquee-track marquee-track--right">
-                  {[...marqueeRow1, ...marqueeRow1].map((c, i) => <MarqueeCard key={`r1-${i}`} {...c} />)}
+            <div className="feat" style={{ marginTop: "clamp(44px,5.5vw,80px)" }}>
+              <article className="feat__row" data-reveal>
+                <div className="feat__media plate plate--hover" data-plate>
+                  <img src="/assets/img/feat-interior.png" alt="Minimal warm living room with oak plywood wall panelling and a linen sofa" width="1376" height="768" loading="lazy" />
                 </div>
-              </div>
-              <div className="marquee-row">
-                <div className="marquee-track marquee-track--left">
-                  {[...marqueeRow2, ...marqueeRow2].map((c, i) => <MarqueeCard key={`r2-${i}`} {...c} />)}
+                <div className="feat__text">
+                  <span className="index feat__ix">A · Interiors</span>
+                  <h3 className="h3">Interiors</h3>
+                  <p className="body">Wall panels, wardrobes and built-ins — calibrated boards that sit flush and stay true, room after room.</p>
                 </div>
-              </div>
-              <div className="marquee-row">
-                <div className="marquee-track marquee-track--right">
-                  {[...marqueeRow3, ...marqueeRow3].map((c, i) => <MarqueeCard key={`r3-${i}`} {...c} />)}
+              </article>
+
+              <article className="feat__row feat__row--rev" data-reveal>
+                <div className="feat__media plate plate--hover" data-plate>
+                  <img src="/assets/img/gallery/app-14.png" alt="Minimal oak pivot flush door in a calm interior" width="1600" height="1050" loading="lazy" />
                 </div>
-              </div>
+                <div className="feat__text">
+                  <span className="index feat__ix">B · Doors</span>
+                  <h3 className="h3">Doors</h3>
+                  <p className="body">Solid-core flush doors, ACC-treated and hot-pressed — dimensionally stable and ready for any finish.</p>
+                </div>
+              </article>
+
+              <article className="feat__row" data-reveal>
+                <div className="feat__media plate plate--hover" data-plate>
+                  <img src="/assets/img/feat-kitchen.png" alt="Minimal light oak kitchen with a matte stone island and integrated appliances" width="1376" height="768" loading="lazy" />
+                </div>
+                <div className="feat__text">
+                  <span className="index feat__ix">C · Kitchens</span>
+                  <h3 className="h3">Kitchens</h3>
+                  <p className="body">BWR and BWP grades built for daily moisture — cabinetry that holds its shape through years of use.</p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -592,6 +536,40 @@ export default function Home() {
                 </div>
                 <div className="precut2__readout"><span>Now cutting</span><span id="plyStatus">Door set · 3 parts</span></div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* manifesto */}
+        <section className="band manifesto rule-top">
+          <div className="shell">
+            <div className="sect-head">
+              <div className="sect-head__bar" data-reveal>
+                <div className="sect-head__lead"><span className="index">01</span><span className="label label--ink">The invisible promise</span></div>
+                <span className="index sect-head__meta">Why Lennor exists</span>
+              </div>
+              <h2 className="h2" data-mask>
+                <span className="mask-line"><span>Plywood is a promise</span></span>
+                <span className="mask-line" style={{ "--d": ".1s" }}><span>you can’t <em className="it">see</em>.</span></span>
+              </h2>
+            </div>
+
+            <div className="mpillars">
+              <article className="mpillar" data-reveal>
+                <span className="mpillar__num">01</span>
+                <h3 className="mpillar__title">The hidden core</h3>
+                <p className="body mpillar__body">What holds a board together — veneers, glue lines, borer treatment — is invisible to the buyer. A carpenter screwing a hinge, a family loading a shelf for twenty years, they are trusting something they will never see.</p>
+              </article>
+              <article className="mpillar" data-reveal style={{ "--d": ".1s" }}>
+                <span className="mpillar__num">02</span>
+                <h3 className="mpillar__title">Own the process</h3>
+                <p className="body mpillar__body">We compose every core ourselves, mix our own resin, calibrate every board on our own sixteen-station line. Nothing is outsourced, because trust can’t be.</p>
+              </article>
+              <article className="mpillar" data-reveal style={{ "--d": ".2s" }}>
+                <span className="mpillar__num">03</span>
+                <h3 className="mpillar__title">Test everything</h3>
+                <p className="body mpillar__body">Every batch is lab-tested against IS:303 and IS:710 in our own laboratory before it earns the Lennor mark. If it didn’t survive all sixteen stations, it isn’t a Lennor.</p>
+              </article>
             </div>
           </div>
         </section>

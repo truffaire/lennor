@@ -58,7 +58,7 @@ const stations = [
 export default function Process() {
   return (
     <>
-      <SiteHeader overDark active="process" />
+      <SiteHeader overDark darkPage active="process" />
 
       <div className="proc-progress" aria-hidden="true"><i></i></div>
 

@@ -1,7 +1,8 @@
 // Top navigation. `overDark` adds the light-on-dark treatment used on pages
-// whose hero sits under the header (e.g. the home hero). `active` marks the
-// current page's link with aria-current, matching the original per-page markup.
-export default function SiteHeader({ overDark = false, active }) {
+// whose hero sits under the header (e.g. the home hero). `darkPage` keeps the
+// scrolled state dark too, for pages that stay dark all the way down (process).
+// `active` marks the current page's link with aria-current.
+export default function SiteHeader({ overDark = false, darkPage = false, active }) {
   const links = [
     { href: "/products", label: "Products", key: "products" },
     { href: "/process", label: "Process", key: "process" },
@@ -9,7 +10,10 @@ export default function SiteHeader({ overDark = false, active }) {
     { href: "/contact", label: "Contact", key: "contact" },
   ];
   return (
-    <header className={`nav${overDark ? " nav--overdark" : ""}`} id="nav">
+    <header
+      className={`nav${overDark ? " nav--overdark" : ""}${darkPage ? " nav--darkpage" : ""}`}
+      id="nav"
+    >
       <div className="shell nav__inner">
         <a className="nav__brand" href="/" aria-label="Lennor Ply — home">
           <img

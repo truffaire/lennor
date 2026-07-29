@@ -20,7 +20,7 @@ const grades = [
     name: "Moisture Resistant", tier: "Interior grade",
     body: "UF-bonded plywood for dry interiors — wardrobes, beds, TV units, panelling and living spaces where the only enemy is everyday humidity.",
     chips: ["Bedroom", "Living", "Panelling", "Wardrobe"],
-    specs: [["Bond", "Urea-formaldehyde"], ["Lab test", "Moisture & glue shear"]],
+    specs: [["Bond", "Melamine-Urea-Formaldehyde"], ["Lab test", "Moisture & glue shear"]],
     w: 0.25,
   },
   {

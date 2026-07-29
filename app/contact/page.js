@@ -56,6 +56,7 @@ export default function Contact() {
                 <div className="dline" data-reveal>
                   <span className="label">Phone / WhatsApp</span>
                   <a className="dline__value" href="tel:+917760778886">+91 77607 78886</a>
+                  <a className="dline__value" href="tel:+917337800121">+91 73378 00121</a>
                   <a className="link-line" href="https://wa.me/917760778886" target="_blank" rel="noopener noreferrer">Message on WhatsApp <span className="btn__arr">→</span></a>
                 </div>
                 <div className="dline" data-reveal style={{ "--d": ".07s" }}>
