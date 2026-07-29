@@ -825,10 +825,9 @@ body.is-ready .hero__bg img {
 .hero--dark .hero__bg {
   background: var(--coal);
 }
+/* even black fade across the whole photo */
 .hero--dark .hero__veil {
-  background:
-    radial-gradient(circle at 50% 50%, rgba(10, 9, 7, 0.45) 0%, rgba(10, 9, 7, 0.3) 50%, rgba(10, 9, 7, 0.15) 85%),
-    linear-gradient(to top, rgba(10, 9, 7, 0.55) 0%, rgba(10, 9, 7, 0.1) 50%, rgba(10, 9, 7, 0.35) 100%);
+  background: rgba(0, 0, 0, 0.62);
 }
 .hero--dark .hero__h1 {
   color: var(--white);
