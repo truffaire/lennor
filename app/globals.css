@@ -993,10 +993,10 @@ body.is-ready .hero--focus .af__c {
   background: var(--white);
 }
 body.menu-open .nav--overdark:not(.is-scrolled) .nav__brand img {
-  filter: invert(1);
+  filter: none;
 }
 body.menu-open .nav--overdark:not(.is-scrolled) .nav__burger span {
-  background: #ffffff;
+  background: var(--ink);
 }
 
 /* ---- page hero (inner pages) ----------------------------------------------- */
@@ -2979,24 +2979,28 @@ a.dline__value:hover {
   background: #ffffff;
 }
 
-/* ---- menu \u2014 faded gradient redesign (dark top \u2192 light bottom) ------------------ */
-.menu {
-  background: url("/assets/img/menu-bg-dust.png") center / cover no-repeat, var(--paper);
+/* ---- menu \u2014 white minimal panel with a fine hairline grid ---------------------- */
+/* lock the page while the menu is open \u2014 the panel itself must not scroll */
+html:has(body.menu-open),
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
 }
-/* scrim: deepens the top for the white logo, lifts the bottom for the dark links */
+.menu {
+  background: #FAF8F3;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
 .menu::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(13, 12, 10, 0.18) 0%,
-    rgba(254, 252, 248, 0) 14%,
-    rgba(254, 252, 248, 0.5) 32%,
-    rgba(254, 252, 248, 0.86) 48%,
-    rgba(254, 252, 248, 0.97) 62%,
-    var(--white) 76%
-  );
+  background-image:
+    radial-gradient(120vmin 90vmin at 82% 8%, rgba(140, 75, 26, 0.07), transparent 70%),
+    linear-gradient(to right, rgba(13, 12, 10, 0.05) 0 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 12, 10, 0.05) 0 1px, transparent 1px);
+  /* equal x/y step = perfect squares */
+  background-size: auto, 96px 96px, 96px 96px;
   pointer-events: none;
 }
 .menu > * {
@@ -3022,10 +3026,10 @@ body.menu-open #nav {
   background: transparent;
 }
 body.menu-open .nav__brand img {
-  filter: invert(1);
+  filter: none;
 }
 body.menu-open .nav__burger span {
-  background: #ffffff;
+  background: var(--ink);
 }
 
 /* ---- footer wordmark \u2014 slightly more visible ----------------------------------- */
