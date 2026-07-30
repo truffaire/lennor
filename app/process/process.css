@@ -140,7 +140,9 @@
   .proc-desc{font-size:.9rem;}
 }
 
-/* scroll-snap mode (JS adds .proc-snap to <html>) */
-html.proc-snap{scroll-snap-type:y mandatory;scroll-behavior:auto;}
+/* scroll-snap mode (JS adds .proc-snap to <html>)
+   `proximity` (not `mandatory`) so the trailing craft band, CTA and footer
+   scroll freely — with mandatory the page snapped back up to the CTA and the
+   footer could never be reached. Only the full-height station panels snap. */
+html.proc-snap{scroll-snap-type:y proximity;scroll-behavior:auto;}
 html.proc-snap .proc-panel{scroll-snap-align:start;scroll-snap-stop:always;}
-html.proc-snap .proc-craft, html.proc-snap .big-cta{scroll-snap-align:start;}
