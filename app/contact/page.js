@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader";
 import ContactMap from "@/components/ContactMap";
+import ContactForm from "@/components/ContactForm";
 import "./contact.css";
 
 export const metadata = {
@@ -15,11 +16,6 @@ export const metadata = {
     images: ["/assets/img/ribbon.jpg"],
   },
 };
-
-const interests = [
-  "MR Plywood", "BWR Plywood", "BWP Plywood", "Marine Plywood",
-  "Block Boards", "Flush Doors", "Bulk pre-cut order", "Dealership enquiry",
-];
 
 export default function Contact() {
   return (
@@ -86,46 +82,7 @@ export default function Contact() {
                 <span className="index sect-head__meta">Reply within 1 working day</span>
               </div>
 
-              <form className="qform" id="qform" style={{ marginTop: "clamp(26px,3.4vh,44px)" }} noValidate data-reveal>
-                <div className="qform__grid">
-                  <div className="field">
-                    <label htmlFor="f-name">Your name *</label>
-                    <input type="text" id="f-name" name="name" autoComplete="name" placeholder="Full name" required />
-                    <span className="err">Please enter your name.</span>
-                  </div>
-                  <div className="field">
-                    <label htmlFor="f-phone">Phone *</label>
-                    <input type="tel" id="f-phone" name="phone" autoComplete="tel" placeholder="+91 ..." required />
-                    <span className="err">Please enter a valid phone number.</span>
-                  </div>
-                  <div className="field field--full">
-                    <label htmlFor="f-city">City / project location</label>
-                    <input type="text" id="f-city" name="city" autoComplete="address-level2" placeholder="e.g. Hassan, Bengaluru, Mysuru" />
-                  </div>
-                  <div className="field field--full">
-                    <label id="interest-label">I’m interested in</label>
-                    <div className="ichips" role="group" aria-labelledby="interest-label">
-                      {interests.map((i) => (
-                        <button type="button" className="ichip" aria-pressed="false" key={i}>{i}</button>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="field field--full">
-                    <label htmlFor="f-msg">Project details</label>
-                    <textarea id="f-msg" name="message" placeholder="Quantities, sizes, timelines — anything that helps us quote faster."></textarea>
-                  </div>
-                </div>
-                <div className="qform__foot">
-                  <button type="submit" className="btn" data-magnetic="0.15"><span>Send via WhatsApp</span><span className="btn__arr">→</span></button>
-                  <p className="small qform__note">Opens WhatsApp with your enquiry pre-filled — nothing is stored on this site.</p>
-                  <noscript><p className="small" style={{ marginTop: "12px" }}>This form requires JavaScript. Please call <a href="tel:+917760778886">+91 77607 78886</a> or <a href="https://wa.me/917760778886">message us on WhatsApp</a> directly.</p></noscript>
-                </div>
-                <p className="qform__success body" role="status">
-                  <strong>Thank you.</strong> Your enquiry has opened in WhatsApp —
-                  press send there and we’ll reply within one working day. Prefer
-                  email? Write to <a className="link-line" href="mailto:lennorply@gmail.com">lennorply@gmail.com</a>.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
 
