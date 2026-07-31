@@ -1,15 +1,15 @@
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata = {
-  title: "Products — MR, BWR, BWP & Marine Grade Plywood",
+  title: "Products — MR, BWR, BWP, Marine & FR Grade Plywood",
   description:
-    "Lennor Ply's full range: MR, BWR, BWP and Marine grade plywood in 7 thicknesses and 3 sheet sizes, plus block boards, flush doors and laminates. Pre-cut sizing for bulk orders.",
+    "Lennor Ply's full range: MR, BWR, BWP, Marine and FR grade plywood in 7 thicknesses and 3 sheet sizes, plus block boards, flush doors and laminates. Pre-cut sizing for bulk orders.",
   alternates: { canonical: "/products" },
   openGraph: {
-    title: "Products — Lennor Ply | MR, BWR, BWP & Marine Grade Plywood",
+    title: "Products — Lennor Ply | MR, BWR, BWP, Marine & FR Grade Plywood",
     description:
-      "Four ISI-certified plywood grades, seven thicknesses, three sheet sizes — plus block boards and flush doors.",
-    url: "https://lennorply.com/products.html",
+      "Five ISI-certified plywood grades, seven thicknesses, three sheet sizes — plus block boards and flush doors.",
+    url: "https://lennorply.com/products",
     images: ["/assets/img/stack.jpg"],
   },
 };
@@ -18,7 +18,7 @@ const grades = [
   {
     grade: "mr", watermark: "MR", is: "IS:303", abbr: "MR",
     name: "Moisture Resistant", tier: "Interior grade",
-    body: "UF-bonded plywood for dry interiors — wardrobes, beds, TV units, panelling and living spaces where the only enemy is everyday humidity.",
+    body: "MUF-bonded plywood for dry interiors — wardrobes, beds, TV units, panelling and living spaces where the only enemy is everyday humidity.",
     chips: ["Bedroom", "Living", "Panelling", "Wardrobe"],
     specs: [["Bond", "Melamine-Urea-Formaldehyde"], ["Lab test", "Moisture & glue shear"]],
     w: 0.25,

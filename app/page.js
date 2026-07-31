@@ -113,7 +113,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">02</span><span className="label label--ink">Anatomy of a board</span></div>
+                <div className="sect-head__lead"><span className="index">01</span><span className="label label--ink">Anatomy of a board</span></div>
                 <span className="index sect-head__meta">Five layers · one bond</span>
               </div>
               <h2 className="h2" data-mask>
@@ -176,7 +176,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">03</span><span className="label label--ink">The range</span></div>
+                <div className="sect-head__lead"><span className="index">02</span><span className="label label--ink">The range</span></div>
                 <span className="index sect-head__meta">Choose your water line</span>
               </div>
               <h2 className="h2" data-mask>
@@ -206,7 +206,7 @@ export default function Home() {
                   <div className="grade__panel-inner">
                     <div className="grade__detail">
                       <div>
-                        <p className="body">UF-bonded plywood for dry interiors — wardrobes, beds, TV units, panelling and living spaces where the only enemy is everyday humidity.</p>
+                        <p className="body">MUF-bonded plywood for dry interiors — wardrobes, beds, TV units, panelling and living spaces where the only enemy is everyday humidity.</p>
                         <div className="grade__rooms">
                           <span className="chip">Bedroom</span><span className="chip">Living</span><span className="chip">Panelling</span><span className="chip">Wardrobe</span>
                         </div>
@@ -382,7 +382,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">04</span><span className="label label--ink">The Lennor standard</span></div>
+                <div className="sect-head__lead"><span className="index">03</span><span className="label label--ink">The Lennor standard</span></div>
                 <span className="index sect-head__meta">On every board · no exceptions</span>
               </div>
               <h2 className="h2" data-mask>
@@ -414,7 +414,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">05</span><span className="label label--ink">From log to board</span></div>
+                <div className="sect-head__lead"><span className="index">04</span><span className="label label--ink">From log to board</span></div>
                 <span className="index sect-head__meta">Sixteen stations · one roof</span>
               </div>
               <h2 className="h2" data-mask>
@@ -456,7 +456,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">06</span><span className="label label--ink">Where Lennor lives</span></div>
+                <div className="sect-head__lead"><span className="index">05</span><span className="label label--ink">Where Lennor lives</span></div>
                 <span className="index sect-head__meta">Applications</span>
               </div>
               <h2 className="h2" data-mask>
@@ -507,7 +507,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">07</span><span className="label label--ink">Bulk pre-cut service</span></div>
+                <div className="sect-head__lead"><span className="index">06</span><span className="label label--ink">Bulk pre-cut service</span></div>
                 <span className="index sect-head__meta">Cut at the factory · not on site</span>
               </div>
               <h2 className="h2" data-mask>
@@ -545,7 +545,7 @@ export default function Home() {
           <div className="shell">
             <div className="sect-head">
               <div className="sect-head__bar" data-reveal>
-                <div className="sect-head__lead"><span className="index">01</span><span className="label label--ink">The invisible promise</span></div>
+                <div className="sect-head__lead"><span className="index">07</span><span className="label label--ink">The invisible promise</span></div>
                 <span className="index sect-head__meta">Why Lennor exists</span>
               </div>
               <h2 className="h2" data-mask>

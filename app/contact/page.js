@@ -11,7 +11,7 @@ export const metadata = {
     title: "Contact — Lennor Ply | Get a Quote",
     description:
       "Quotes, dealer enquiries, bulk pre-cut orders or a factory visit — one call does it.",
-    url: "https://lennorply.com/contact.html",
+    url: "https://lennorply.com/contact",
     images: ["/assets/img/ribbon.jpg"],
   },
 };

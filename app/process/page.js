@@ -11,7 +11,7 @@ export const metadata = {
     title: "Manufacturing Process — Lennor Ply | From Log to Board in 16 Stations",
     description:
       "From a grader's hands in the timber yard to the final signature in our laboratory.",
-    url: "https://lennorply.com/process.html",
+    url: "https://lennorply.com/process",
     images: ["/assets/img/factory-aerial.png"],
   },
 };

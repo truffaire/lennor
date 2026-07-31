@@ -9,7 +9,7 @@ export const metadata = {
     title: "About — Lennor Ply | Plywood Manufacturer, Karnataka",
     description:
       "Everything we sell, we make — on our own sixteen-station line, under our own mark.",
-    url: "https://lennorply.com/about.html",
+    url: "https://lennorply.com/about",
     images: ["/assets/img/factory-wide.jpg"],
   },
 };
