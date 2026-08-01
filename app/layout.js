@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         {children}
         <SiteFooter />
         <Dock />
-        <Script src="/js/main.js?v=29" strategy="afterInteractive" />
+        <Script src="/js/main.js?v=31" strategy="afterInteractive" />
       </body>
     </html>
   );

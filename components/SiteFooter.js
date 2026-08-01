@@ -17,6 +17,7 @@ export default function SiteFooter() {
               <li><a href="/process">Process</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/brochure">Download brochure ↓</a></li>
             </ul>
           </nav>
           <nav aria-label="Footer — range">
@@ -45,7 +46,10 @@ export default function SiteFooter() {
         </div>
         <div className="footer__bottom">
           <span>© <span id="year">2026</span> Lennor Ply — All rights reserved</span>
-          <span>Ply · Board · Door · Laminates</span>
+          <span className="footer__legal">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
+          </span>
           <span>IS:303 · IS:710 · Made in Karnataka</span>
         </div>
       </div>

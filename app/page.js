@@ -92,6 +92,7 @@ export default function Home() {
 
             <div className="hero__cta" data-reveal data-gate style={{ "--d": ".45s" }}>
               <a className="btn btn--paper" href="/products" data-magnetic="0.22"><span>Explore the range</span><span className="btn__arr">→</span></a>
+              <a className="btn btn--ghost" href="/brochure"><span>Download brochure</span><span className="btn__arr">↓</span></a>
             </div>
           </div>
         </section>

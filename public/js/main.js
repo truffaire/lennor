@@ -615,19 +615,64 @@
     setTimeout(plyStartCycle, 600);
   }
 
-  /* ---- grade strip: clone cards for infinite loop ------------------------- */
+  /* ---- grade strip: auto-scroll marquee you can also drag by hand ---------- */
 
   (function () {
-    var track = doc.querySelector(".gstrip__track");
-    if (!track) return;
+    var strip = doc.querySelector(".gstrip");
+    var track = strip && strip.querySelector(".gstrip__track");
+    if (!strip || !track) return;
     var cards = track.querySelectorAll(".gstrip__card");
     if (!cards.length) return;
 
+    // clone the set once so the loop is seamless
     for (var i = 0; i < cards.length; i++) {
       var clone = cards[i].cloneNode(true);
       clone.setAttribute("aria-hidden", "true");
       track.appendChild(clone);
     }
+
+    // one set's width — the seam where we wrap to fake an infinite loop
+    var half = 0;
+    var speed = 0; // px per frame; matched to the old 35s full-loop
+    function measure() {
+      half = track.scrollWidth / 2;
+      speed = half / (35 * 60);
+    }
+    measure();
+    win.addEventListener("resize", measure);
+
+    var paused = reduced; // no auto-advance if reduced-motion; still swipeable
+    var idle = null;
+    function pause() {
+      paused = true;
+      if (idle) clearTimeout(idle);
+    }
+    function resumeSoon() {
+      if (reduced) return;
+      if (idle) clearTimeout(idle);
+      idle = setTimeout(function () { paused = false; }, 1400);
+    }
+
+    // pause while the user is touching / dragging / wheeling, resume after idle.
+    // (These cover manual interaction; we don't listen for "scroll" because our
+    // own auto-advance fires scroll events that would falsely pause it.)
+    ["pointerdown", "touchstart", "wheel", "mouseenter"].forEach(function (ev) {
+      strip.addEventListener(ev, pause, { passive: true });
+    });
+    ["pointerup", "touchend", "mouseleave"].forEach(function (ev) {
+      strip.addEventListener(ev, resumeSoon, { passive: true });
+    });
+
+    function loop() {
+      if (!paused && half > 0) {
+        strip.scrollLeft += speed;
+      }
+      // wrap seamlessly at the seam (cloned content is identical there)
+      if (strip.scrollLeft >= half) strip.scrollLeft -= half;
+      else if (strip.scrollLeft <= 0) strip.scrollLeft += half;
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
   })();
 
   /* ---- thickness picker: pick a thickness, watch it stack ------------------- */

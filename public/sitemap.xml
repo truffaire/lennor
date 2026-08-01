@@ -5,4 +5,7 @@
   <url><loc>https://lennorply.com/process</loc><priority>0.8</priority></url>
   <url><loc>https://lennorply.com/about</loc><priority>0.7</priority></url>
   <url><loc>https://lennorply.com/contact</loc><priority>0.9</priority></url>
+  <url><loc>https://lennorply.com/brochure</loc><priority>0.6</priority></url>
+  <url><loc>https://lennorply.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://lennorply.com/terms</loc><priority>0.3</priority></url>
 </urlset>

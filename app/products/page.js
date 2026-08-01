@@ -91,6 +91,7 @@ export default function Products() {
             </p>
             <div className="phero__aside" data-reveal style={{ "--d": ".45s" }}>
               <a className="btn" href="/contact#quote" data-magnetic="0.2"><span>Request pricing</span><span className="btn__arr">→</span></a>
+              <a className="btn btn--ghost" href="/brochure"><span>Download brochure</span><span className="btn__arr">↓</span></a>
             </div>
           </div>
         </section>
